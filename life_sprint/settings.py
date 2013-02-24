@@ -153,14 +153,14 @@ STATICFILES_FINDERS = (
 DATABASES = {
     "default": {
         # Add "postgresql_psycopg2", "mysql", "sqlite3" or "oracle".
-        "ENGINE": "django.db.backends.",
+        "ENGINE": "django.db.backends.postgresql_psycopg2",
         # DB name or path to database file if using sqlite3.
-        "NAME": "",
+        "NAME": "life_sprint",
         # Not used with sqlite3.
-        "USER": "",
+        "USER": "ls_user",
         # Not used with sqlite3.
-        "PASSWORD": "",
-        # Set to empty string for localhost. Not used with sqlite3.
+        "PASSWORD": "appuser",
+        # Set to empty testring for localhost. Not used with sqlite3.
         "HOST": "",
         # Set to empty string for default. Not used with sqlite3.
         "PORT": "",
@@ -241,11 +241,11 @@ INSTALLED_APPS = (
     "mezzanine.pages",
     "mezzanine.galleries",
     "mezzanine.twitter",
-    #"mezzanine.accounts",
-    #"mezzanine.mobile",
+    "mezzanine.accounts",
+    "mezzanine.mobile",
 )
 
-# List of processors used by RequestContext to populate the context.
+# Livest of processors used by RequestContext to populate the context.
 # Each one should be a callable that takes the request object as its
 # only parameter and returns a dictionary to add to the context.
 TEMPLATE_CONTEXT_PROCESSORS = (
